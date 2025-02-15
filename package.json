@@ -1,0 +1,29 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm server/index.ts",
+    "dev": "node --loader ts-node/esm server/index.ts",
+    "build": "",
+    "serve": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "prisma": "^6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
