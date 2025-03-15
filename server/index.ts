@@ -123,6 +123,7 @@ app.route('/maps')
         res.status(200).json(maps);
       }
     } catch (error) {
+      console.error("get maps error:", error);
       res.status(500).json({
         error: "Failed to fetch maps"
       });

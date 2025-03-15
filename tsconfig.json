@@ -10,7 +10,9 @@
     "jsxImportSource": "solid-js",
     "types": ["node", "express"],
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "outDir": "dist",
+    "rootDir": "server", // index.ts가 위치한 곳
   },
   "scripts": {
     "build": "tsc"
