@@ -35,7 +35,9 @@ const KAKAO_CLIENT_ID = process.env.KAKAO_CLIENT_ID;
 const PORT = process.env.PORT;
 const KAKAO_REDIRECT_URI = `${SERVER_DOMAIN}/auth/kakao/callback`;
 
-app.use(cors());
+app.use(cors({
+  origin: CLIENT_DOMAIN
+}));
 app.use(express.json());
 
 //////// users ////////
