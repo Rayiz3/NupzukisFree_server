@@ -29,9 +29,11 @@ dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
 
-const CLIENT_DOMAIN = "http://localhost:3000";
-const KAKAO_CLIENT_ID = "5dc16f5630ecc658d6e41449c09125ac";
-const KAKAO_REDIRECT_URI = "http://localhost:4242/auth/kakao/callback";
+const CLIENT_DOMAIN = process.env.CLIENT_URL;
+const SERVER_DOMAIN = process.env.SERVER_URL;
+const KAKAO_CLIENT_ID = process.env.KAKAO_CLIENT_ID;
+const PORT = process.env.PORT;
+const KAKAO_REDIRECT_URI = `${SERVER_DOMAIN}/auth/kakao/callback`;
 
 app.use(cors());
 app.use(express.json());
@@ -342,6 +344,6 @@ app.get("/auth/kakao/callback", async (req, res) => {
   }
 });
 
-app.listen(4242, () => {
-  console.log("Server running on http://localhost:4242");
+app.listen(PORT, () => {
+  console.log(`Server running on ${SERVER_DOMAIN}`);
 });
