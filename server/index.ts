@@ -354,5 +354,6 @@ app.get("/auth/kakao/callback", async (req, res) => {
 });
 
 app.listen(PORT, () => {
+  console.log(`qoddi port is : ${process.env.PORT}`)
   console.log(`Server running on port ${PORT}`);
 });
