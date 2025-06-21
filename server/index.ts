@@ -32,7 +32,7 @@ const prisma = new PrismaClient();
 const CLIENT_DOMAIN = process.env.CLIENT_URL;
 const SERVER_DOMAIN = process.env.SERVER_URL;
 const KAKAO_CLIENT_ID = process.env.KAKAO_CLIENT_ID;
-const PORT = process.env.PORT || 4242;
+const PORT = process.env.PORT || 3000;
 const KAKAO_REDIRECT_URI = `${SERVER_DOMAIN}/auth/kakao/callback`;
 
 app.options('*', cors({
